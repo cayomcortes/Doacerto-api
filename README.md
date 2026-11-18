@@ -1,6 +1,6 @@
 # 🩸 Sistema de Doação de Sangue (Fullstack)
 
-Projeto desenvolvido para a disciplina **Projeto de Extensão em Software Fullstack**.
+Projeto desenvolvido para a disciplina *Projeto de Extensão em Software Fullstack*.
 
 ## 1. O problema
 
@@ -76,7 +76,7 @@ Conta de administrador criada automaticamente na primeira execução:
 
 ## 4. Como rodar o back-end
 
-Pré-requisitos: Python 3.10+.
+Pré-requisitos: Python 3.11 ou 3.12(testado no 3.11.).
 
 ```bash
 cd backend
