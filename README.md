@@ -42,7 +42,7 @@ blood-donation-system/
 - **Back-end**: Python com FastAPI, autenticação JWT e senhas com hash
   (bcrypt via passlib).
 - **Banco de dados**: SQLite (arquivo `blood_donation.db`, criado
-  automaticamente), gerenciado com SQLAlchemy
+  automaticamente), gerenciado com SQLAlchemy.
 
 ## 3. Funcionalidades
 
@@ -70,7 +70,7 @@ Conta de administrador criada automaticamente na primeira execução:
 
 ## 4. Como rodar o back-end
 
-Pré-requisitos: Python 3.11 ou 3.12(testado no 3.11.).
+Pré-requisitos: Python 3.11 ou 3.12(testado no 3.11).
 
 ```bash
 cd backend
@@ -119,11 +119,11 @@ das extensões listadas em `.vscode/extensions.json`:
 | Pylance | Autocompletar e checagem de tipos no back-end |
 | Black Formatter | Formatação automática do código Python |
 | REST Client | Testar os endpoints da API direto do VS Code |
-| SQLite Viewer | Visualizar o conteúdo do arquivo `blood_donation.db` |
+| SQLite Viewer | Visualizar o conteúdo do arquivo Doacerto-api/ |
 | Live Server | Rodar o front-end com recarregamento automático |
 | Prettier | Formatação automática de HTML/CSS/JS |
 | ESLint | Checagem de qualidade do JavaScript |
-| GitLens | Visualizar histórico de commits (útil para o item 2.3.1 do enunciado) |
+| GitLens | Visualizar histórico de commits |
 | Code Spell Checker | Evita erros de digitação no código e nos textos |
 
 Para instalar tudo de uma vez: abra a paleta de comandos
