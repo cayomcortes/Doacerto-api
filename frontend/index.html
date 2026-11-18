@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<title>Doe Sangue - Acesso</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="auth-wrapper">
+    <div class="card" id="loginCard">
+      <h2>🩸 Doe Sangue</h2>
+      <p style="color:var(--muted); font-size:13px; margin-top:-8px;">
+        Entre com sua conta de doador ou administrador
+      </p>
+      <label>E-mail</label>
+      <input type="email" id="loginEmail" placeholder="voce@email.com" />
+      <label>Senha</label>
+      <input type="password" id="loginPassword" placeholder="••••••••" />
+      <button class="primary" onclick="doLogin()">Entrar</button>
+      <div class="error" id="loginError"></div>
+      <div class="link-toggle">
+        Ainda não tem conta? <a onclick="toggleForms()">Cadastre-se como doador</a>
+      </div>
+      <div class="link-toggle" style="margin-top:2px; color:var(--muted);">
+        Admin de teste: admin@hemocentro.com / admin123
+      </div>
+    </div>
+
+    <div class="card" id="registerCard" style="display:none;">
+      <h2>🩸 Cadastro de doador</h2>
+      <label>Nome completo</label>
+      <input type="text" id="regName" />
+      <label>E-mail</label>
+      <input type="email" id="regEmail" />
+      <label>Senha</label>
+      <input type="password" id="regPassword" />
+      <label>Telefone</label>
+      <input type="text" id="regPhone" placeholder="(00) 00000-0000" />
+      <label>Tipo sanguíneo</label>
+      <select id="regBloodType">
+        <option value="">Não sei / prefiro informar depois</option>
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B-">B-</option>
+        <option value="AB+">AB+</option>
+        <option value="AB-">AB-</option>
+        <option value="O+">O+</option>
+        <option value="O-">O-</option>
+      </select>
+      <button class="primary" onclick="doRegister()">Criar conta</button>
+      <div class="error" id="registerError"></div>
+      <div class="success" id="registerSuccess"></div>
+      <div class="link-toggle">
+        Já tem conta? <a onclick="toggleForms()">Voltar para o login</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

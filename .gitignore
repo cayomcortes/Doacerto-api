@@ -1,3 +1,17 @@
-.venv/
+# Python
 __pycache__/
-doacoes.db
+*.pyc
+.venv/
+venv/
+env/
+
+# Banco de dados local
+*.db
+*.sqlite3
+
+# VS Code
+.vscode/*.log
+
+# SO
+.DS_Store
+Thumbs.db

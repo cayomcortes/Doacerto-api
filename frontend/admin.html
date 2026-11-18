@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<title>Doe Sangue - Painel Administrativo</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>🩸 Doe Sangue — Painel Administrativo</h1>
+    <button onclick="logout()">Sair</button>
+  </header>
+
+  <div class="container">
+    <div class="tabs">
+      <a class="active" onclick="showTab('appointments')">Agendamentos</a>
+      <a onclick="showTab('inventory')">Estoque</a>
+    </div>
+
+    <div class="card wide" id="tabAppointments">
+      <h2>Agendamentos de doação</h2>
+      <label>Filtrar por status</label>
+      <select id="statusFilter" onchange="loadAppointments()">
+        <option value="">Todos</option>
+        <option value="scheduled">Agendado</option>
+        <option value="completed">Concluído</option>
+        <option value="canceled">Cancelado</option>
+      </select>
+      <table>
+        <thead>
+          <tr><th>Doador (ID)</th><th>Data</th><th>Local</th><th>Status</th><th>Ações</th></tr>
+        </thead>
+        <tbody id="apptTableBody">
+          <tr><td colspan="5">Carregando...</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card wide" id="tabInventory" style="display:none;">
+      <h2>Estoque de sangue</h2>
+      <table>
+        <thead><tr><th>Tipo</th><th>Unidades</th><th>Mínimo</th><th>Situação</th><th>Ações</th></tr></thead>
+        <tbody id="inventoryTableBody">
+          <tr><td colspan="5">Carregando...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

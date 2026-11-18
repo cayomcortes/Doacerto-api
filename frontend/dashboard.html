@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<title>Doe Sangue - Meu painel</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>🩸 Doe Sangue — Painel do Doador</h1>
+    <button onclick="logout()">Sair</button>
+  </header>
+
+  <div class="container">
+    <div class="grid">
+      <div class="card wide">
+        <h2>Meu perfil</h2>
+        <p id="profileInfo">Carregando...</p>
+      </div>
+
+      <div class="card wide">
+        <h2>Agendar doação</h2>
+        <label>Data e horário</label>
+        <input type="datetime-local" id="apptDatetime" />
+        <label>Local</label>
+        <input type="text" id="apptLocation" placeholder="Ex.: Hemocentro Central" />
+        <label>Observações (opcional)</label>
+        <textarea id="apptNotes" rows="2"></textarea>
+        <button class="primary" onclick="scheduleAppointment()">Agendar</button>
+        <div class="error" id="apptError"></div>
+        <div class="success" id="apptSuccess"></div>
+      </div>
+    </div>
+
+    <div class="card wide">
+      <h2>Meus agendamentos</h2>
+      <table>
+        <thead>
+          <tr><th>Data</th><th>Local</th><th>Status</th><th>Observações</th></tr>
+        </thead>
+        <tbody id="apptTableBody">
+          <tr><td colspan="4">Carregando...</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card wide">
+      <h2>Estoque atual do hemocentro</h2>
+      <table>
+        <thead><tr><th>Tipo</th><th>Unidades</th><th>Situação</th></tr></thead>
+        <tbody id="inventoryTableBody">
+          <tr><td colspan="3">Carregando...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
