@@ -42,9 +42,7 @@ blood-donation-system/
 - **Back-end**: Python com FastAPI, autenticação JWT e senhas com hash
   (bcrypt via passlib).
 - **Banco de dados**: SQLite (arquivo `blood_donation.db`, criado
-  automaticamente), gerenciado com SQLAlchemy — pode ser trocado por
-  PostgreSQL/MySQL apenas alterando `SQLALCHEMY_DATABASE_URL` em
-  `backend/database.py`.
+  automaticamente), gerenciado com SQLAlchemy
 
 ## 3. Funcionalidades
 
@@ -68,11 +66,7 @@ Conta de administrador criada automaticamente na primeira execução:
 - **E-mail:** `admin@hemocentro.com`
 - **Senha:** `admin123`
 
-> Sugestões de evolução (para explorar a criatividade pedida no item 1.8 do
-> enunciado): envio de e-mail/SMS de lembrete antes da doação, geração de um
-> "cartão do doador" em PDF, dashboard com gráficos de doações por período,
-> ranking de doadores mais frequentes, ou notificação automática quando um
-> tipo sanguíneo entra em estoque crítico.
+
 
 ## 4. Como rodar o back-end
 
@@ -92,8 +86,7 @@ uvicorn main:app --reload
 ```
 
 A API sobe em `http://localhost:8000`. A documentação interativa (Swagger)
-fica disponível automaticamente em `http://localhost:8000/docs` — útil para
-testar as rotas sem depender do front-end.
+fica disponível automaticamente em `http://localhost:8000/docs`.
 
 ## 5. Como rodar o front-end
 
@@ -136,17 +129,3 @@ das extensões listadas em `.vscode/extensions.json`:
 Para instalar tudo de uma vez: abra a paleta de comandos
 (`Ctrl+Shift+P` / `Cmd+Shift+P`), digite **"Extensions: Show Recommended
 Extensions"** e clique em instalar todas.
-
-## 7. Publicando no GitHub
-
-```bash
-git init
-git add .
-git commit -m "Sistema de doação de sangue - versão inicial"
-git branch -M main
-git remote add origin <URL_DO_SEU_REPOSITORIO>
-git push -u origin main
-```
-
-Lembre-se de dar acesso ao repositório para o professor e de fazer commits
-distribuídos entre os integrantes do grupo (item 2.3.1 do enunciado).
